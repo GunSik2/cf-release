@@ -1,25 +1,29 @@
 # Deploying CF on bosh-lite
+* Google groups:
+  [vcap-dev](https://groups.google.com/a/cloudfoundry.org/group/vcap-dev/topics) (for CF) &
+  [bosh-users](https://groups.google.com/a/cloudfoundry.org/group/bosh-users/topics) &
+  [bosh-dev](https://groups.google.com/a/cloudfoundry.org/group/bosh-dev/topics)
 
 ## Minimum requirements
 
-The machine this worked on was running with 8GB of ram. We recommend using 16GB or more for a much better reliability and performance.
+8GB of RAM. 
+Recommend using 16GB+ for better reliability and performance.
 
-## Prepare and target the bosh lite director
+## Prepare and target the BOSH Lite director
 
-Make sure you have successfully installed and started the bosh-lite vm. This guide will assume default settings and setup recommended at:
-https://github.com/cloudfoundry/bosh-lite/blob/master/README.md
+Refer to [installation instructions](https://github.com/cloudfoundry/bosh-lite/blob/master/README.md) for BOSH Lite 
 
-A Bosh lite director must be available and targeted by the `bosh` command line executable.
 
-#Quick start for a demo of CF
-
-Assuming the above bosh director preparation and current directory to be a checkout of `cloudfoundry/cf-release` repo.
+# Deploying the latest final cf-release on bosh-lite
 
 ```
+git clone https://github.com/cloudfoundry/cf-release
+cd cf-release
+./update
 ./bosh-lite/provision_latest_stable.sh
 ```
 
-#Step by step deploy to make and test dev releases
+# Step by step guide for making, deploying, and testing dev releases on bosh-lite
 
 ### Upload a cf-compatible bosh-lite stemcell
 
