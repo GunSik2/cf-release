@@ -4,3 +4,4 @@ git submodule --quiet foreach '                                                 
   GITCOUNT=`git log head...FETCH_HEAD --oneline | wc -l` && \
   echo $REPO $GITCOUNT
 '
+
