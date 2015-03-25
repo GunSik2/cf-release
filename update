@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+
 submodule_warning='Uncommitted submodules changes will be clobbered'
 unversioned_change_warning='Unversioned changes will be clobbered'
 
